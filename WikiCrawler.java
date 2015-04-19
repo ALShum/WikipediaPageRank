@@ -8,11 +8,11 @@ import java.util.Set;
 
 /**
  * Crawls a wikipedia page and generates a graph starting at user input starting page and 
- * only including pages with user input keywords.  The graph will be recorded as a the number
+ * only including pages with user input keywords.  The graph will be recorded as the number
  * of edges followed by a list of edges in the textfile.  Each line represents an edge and each
- * edge is a spare separated pair of vertex names.  
+ * edge is a space separated pair of vertex names.  
  * 
- * This process will continue until the maximum number of pages are collected where the maximum
+ * Pages will be crawled and collect until the maximum number of pages are collected where the maximum
  * is user specificed.  Once this limit has been reached, edges in the graph will continue to be generated
  * but only between previously recorded vertices.  Any URLs to previously unseen pages will be ignored 
  * once the max page limit has been reached.  
@@ -100,7 +100,7 @@ public class WikiCrawler {
 		if(toVisit.isEmpty()) return(false);
 		String fromPage = toVisit.poll();
 		
-		System.out.println("fromPage: " + BASE_URL + fromPage); //TODO
+		System.out.println("fromPage: " + BASE_URL + fromPage);
 		SimpleWikiLinkParser s = new SimpleWikiLinkParser(BASE_URL + fromPage);
 		Set<String> newLinks = s.getLinks();
 		pagesRequested++;
