@@ -13,7 +13,7 @@ import java.util.Set;
 
 /**
  * Calculates the PageRank of a graph.  The graph needs to be stored as a text file with 
- * each row containing exactly one edge.  Each edge needs to be represented as a spare 
+ * each row containing exactly one edge.  Each edge needs to be represented as a space 
  * separated pair of vertex names.
  * 
  * The page rank constant BETA, which governs 1 - probability of "teleportation", is set to 0.85.  
